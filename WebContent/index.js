@@ -5,15 +5,15 @@ $(document).ready(function() {
 	$("#identification").click(popUpIdentification);
 	$(".menuBox").mouseover(addClass);
 	$(".menuBox").mouseout(removeClass);
-	$(".fiche").click(goToUrl);
+	// $(".fiche").click(goToUrl);
 	$(window).on('resize', placeIdBox);
-	placeIdBox();
 	$("#inscription").click(goToUrl);
 	$("#formulaireConnexion").hide();
 	$("#inscription").hide();
 	$("#buttonNext").click(function() {
 		slides(true);
 	});
+	placeIdBox();
 });
 
 function popUpIdentification() {
@@ -35,16 +35,23 @@ function removeClass() {
 
 function placeIdBox(event) {
 	var posFeuille = $("#feuille").offset().left;
-	$("#identification").css("right", posFeuille);
+	var largFeuille = $("#feuille").width();
+	var largFenetre = $(document).width();
+	var positionDroiteId = largFenetre - (posFeuille + largFeuille);
+	console.log(posFeuille);
+	console.log(largFeuille);
+	console.log(largFenetre);
+	console.log(positionDroiteId);
+	$("#identification").css("right", positionDroiteId);
 	$("#formulaireConnexion").css("right",
-			posFeuille + $("#identification").width());
-	$("#inscription").css("right", posFeuille);
+			positionDroiteId + $("#identification").width());
+	$("#inscription").css("right", positionDroiteId);
 	$("#inscription").css("top", $("#identification").height());
 }
 
 function goToUrl(event) {
 	window.location = ($(this).attr("data-url"));
-//	console.log(($(this).attr("data-url")));
+	// console.log(($(this).attr("data-url")));
 }
 
 // =========================================
@@ -65,12 +72,12 @@ function slides(i) {
 	}
 	count++;
 
-//	console.log($("#divImg" + count).width());
+	// console.log($("#divImg" + count).width());
 
-//	console.log($("#divImg" + count).attr("z-index"));
+	// console.log($("#divImg" + count).attr("z-index"));
 	$("#divImg" + count).width("1300px");
 
-//	console.log($("#divImg" + count).width());
+	// console.log($("#divImg" + count).width());
 
 	if (count == 1) {
 		$("#divImg" + (nbImage).toString()).width("0%");
