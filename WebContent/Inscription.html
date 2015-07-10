@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inscription</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+label {
+	width: 200px;
+	margin: 10px;
+}
+
+input {
+	position: absolute;
+	left: 135px;
+	margin-top: 5px;
+}
+
+fieldset {
+	width: 280px;
+	height: 70px;
+}
+
+button {
+	margin: 10px;
+}
+</style>
+</head>
+<body>
+
+	<form id="formulaireConnexion" method="post"
+		action="http://192.168.1.16:8080/echo/EchoServlet">
+		<fieldset>
+			<label for="userName">Nom d'utilisateur:</label> <input type="text"
+				id="userName" name="userBox" placeholder="Utilisateur" /><br>
+			<label for="pswd">Mot de passe:</label> <input type="password"
+				id="pswd" name="pswdBox" placeholder="Mot de passe" /> <br> <label
+				for="pswd2">Confirmez:</label> <input type="password" id="pswd2"
+				name="pswdBox2" placeholder="Mot de passe" /><br>
+			
+		</fieldset>
+		<button id="submitButton">Inscription</button>
+	</form>
+
+</body>
+</html>
