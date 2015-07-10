@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	console.log("JavaScript ready!");
 	$("#feuille").hide();
-	$("#feuille").fadeIn(4000);
+	$("#feuille").fadeIn(0000);
 	$("#identification").click(popUpIdentification);
 	$(".menuBox").mouseover(addClass);
 	$(".menuBox").mouseout(removeClass);
@@ -9,7 +9,6 @@ $(document).ready(function() {
 	$(window).on('resize', placeIdBox);
 	placeIdBox();
 	$("#formulaireConnexion").hide();
-
 });
 
 function popUpIdentification() {

@@ -1,5 +1,5 @@
-[{image:'maroc.jpg',destination:'Maroc',transport:'Avion et train',hebergement:'Hôtel et demi-pension',prix:'500'},
-{image:'lisbonne.jpg',destination:'Lisbonne',transport:'Train',hebergement:'Hôtel',prix:'700'},
+[{image:'maroc.jpg',destination:'Maroc',transport:'Avion et train',hebergement:'Hotel et demi-pension',prix:'500'},
+{image:'lisbonne.jpg',destination:'Lisbonne',transport:'Train',hebergement:'Hotel',prix:'700'},
 {image:'nuits.jpg',destination:'Caraïbes',transport:'Avion',hebergement:'Tout compris',prix:'1000'},
 {image:'nuits.jpg',destination:'Caraïbes',transport:'Avion',hebergement:'Tout compris',prix:'1000'},
 {image:'nuits.jpg',destination:'Caraïbes',transport:'Avion',hebergement:'Tout compris',prix:'1000'},

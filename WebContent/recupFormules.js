@@ -20,10 +20,12 @@ function query(xhr, urlGetString) {
 	xhr.send();
 }
 
+var newId=0;
 function setInput(obj) {
-	var newFiche;
+	var newFiche, newDivImg, newImg, newP1, newP2, newP3, newDivPrix;
 	for(var i in obj){
-		newFiche = "<div data-url='destinations.html' class='fiche'>" +
+		newId++;
+		newFiche = "<div id='ficheId"+newId+"' data-url='destinations.html' class='fiche'>" +
 					"<div>" +
 						"<img src='Images/"+obj[i].image+"' style='background-repeat: none;'></img>" +
 					"</div>" +
@@ -33,10 +35,15 @@ function setInput(obj) {
 					"<div class='prix'>"+obj[i].prix+"€</div>" +
 					"</div>" ;
 		$(newFiche).appendTo($("#rang"));
+		$("#ficheId"+newId).click(goToUrl)
 	}
 }
 
-$(function(){
+function goToUrl(event){
+	window.location = ($(this).attr("data-url"));
+}
+
+$(document).ready(function(){
 	var xhr = getXMLHttpRequest();
 	var url = "formules.json";
 	query(xhr, url);
